@@ -1,0 +1,16 @@
+
+Mazkur kod Django ORM yordamida davlat, hudud, tuman, mahalla, qo‘shnichilik, uy va odamlar kabi tuzilmalarning ma'lumotlar bazasidagi modelini yaratadi. 
+
+Modellar:
+    President (Prezident): Prezidentning ismi, partiyasi va tarjimai holini saqlaydi.
+    State (Davlat): Davlatning nomi, prezidenti, bayrog‘i, gerbi, va maydoni.
+    Region (Hudud): Davlat tarkibidagi hududlar haqida ma'lumot.
+    District (Tuman): Hududga tegishli tumanlarning xususiyatlari.
+    MFY (Mahalla): Tuman tarkibidagi mahalla fuqarolar yig‘ini ma'lumotlari.
+    Neighborhood (Qo‘shnichilik): Mahalla tarkibidagi qo‘shnichiliklar.
+    House (Uy): Qo‘shnichilikdagi uylar va ularning aholisi.
+    Human (Odam): Uyda yashovchilar haqida ma'lumot.
+Asosiy xususiyatlar: Har bir modelda unikal identifikator, tegishli tashqi kalit bog‘lanishlari va ko‘rinish tartibi mavjud.
+
+
+

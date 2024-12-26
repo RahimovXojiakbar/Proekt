@@ -24,7 +24,7 @@ from drf_yasg import openapi
 schema_view = get_schema_view(
     openapi.Info(
         title="Mahalla, Fuqarolar",
-        description="Bu loyiha malum bir rais tomonida boshqariladigan hududni malumotlarini ko'rish, saqlash, o'zgartirish, o'chirish hamda boshqarish imkoniyatini beradi",
+        description="Bu loyiha bir nechta ijtimoiy va siyosiy tuzilmalarni, masalan, davlat, mintaqalar, tumanlar, MFYlar, mahallalar va uylar bilan bog‘liq ma'lumotlarni saqlash uchun mo‘ljallangan. Har bir ob'ekt uchun shaxslar, ularning holati va boshqa parametrlar ham kiritiladi.",
         contact=openapi.Contact(email="rahimovxojiakbar69@gmail.com"),
         default_version='1.0.0',
         license=openapi.License(name='Loyiha Listsenziyasi'),

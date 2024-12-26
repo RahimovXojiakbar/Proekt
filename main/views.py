@@ -10,6 +10,7 @@ class MyPagination(PageNumberPagination):
     page_size_query_param = 'page_size'
     max_page_size = 100
 
+# =======================================================================================================
 
 class PresidentViewSet(ModelViewSet):
     queryset = models.President.objects.all()
@@ -19,7 +20,7 @@ class PresidentViewSet(ModelViewSet):
     search_fields = ['name']
     filterset_fields = ['information']
     
-
+# =======================================================================================================
 
 class StateViewSet(ModelViewSet):
     queryset = models.State.objects.all()
@@ -29,6 +30,7 @@ class StateViewSet(ModelViewSet):
     search_fields = ['title']
     filterset_fields = ['president']
 
+# =======================================================================================================
 
 class GovernorRegionViewSet(ModelViewSet):
     queryset = models.Governor_Region.objects.all()
@@ -38,6 +40,7 @@ class GovernorRegionViewSet(ModelViewSet):
     search_fields = ['name']
     filterset_fields = ['information']
 
+# =======================================================================================================
 
 class RegionViewSet(ModelViewSet):
     queryset = models.Region.objects.all()
@@ -47,7 +50,7 @@ class RegionViewSet(ModelViewSet):
     search_fields = ['title']
     filterset_fields = ['state', 'governor']
 
-
+# =======================================================================================================
 
 class GovernorDistrictViewSet(ModelViewSet):
     queryset = models.Governor_District.objects.all()
@@ -57,6 +60,7 @@ class GovernorDistrictViewSet(ModelViewSet):
     search_fields = ['name']
     filterset_fields = ['information']
 
+# =======================================================================================================
 
 class DistrictViewSet(ModelViewSet):
     queryset = models.District.objects.all()
@@ -66,6 +70,7 @@ class DistrictViewSet(ModelViewSet):
     search_fields = ['title']
     filterset_fields = ['region', 'governor']
 
+# =======================================================================================================
 
 class ChairmanViewSet(ModelViewSet):
     queryset = models.Chairman.objects.all()
@@ -75,7 +80,7 @@ class ChairmanViewSet(ModelViewSet):
     search_fields = ['name']
     filterset_fields = ['information']
 
-
+# =======================================================================================================
 
 class MFYViewSet(ModelViewSet):
     queryset = models.MFY.objects.all()
@@ -85,6 +90,7 @@ class MFYViewSet(ModelViewSet):
     search_fields = ['title']
     filterset_fields = ['district', 'chairman']
 
+# =======================================================================================================
 
 class NeighborhoodViewSet(ModelViewSet):
     queryset = models.Neighborhood.objects.all()
@@ -94,8 +100,7 @@ class NeighborhoodViewSet(ModelViewSet):
     search_fields = ['title']
     filterset_fields = ['MFY']
 
-
-
+# =======================================================================================================
 
 class HouseViewSet(ModelViewSet):
     queryset = models.House.objects.all()
@@ -105,7 +110,7 @@ class HouseViewSet(ModelViewSet):
     search_fields = ['house_number']
     filterset_fields = ['a_b', 'neighborhood', 'status']
 
-
+# =======================================================================================================
 
 class HumanViewSet(ModelViewSet):
     queryset = models.Human.objects.all()
