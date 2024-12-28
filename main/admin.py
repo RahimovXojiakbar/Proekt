@@ -9,7 +9,7 @@ class PresidentAdmin(ModelAdmin):
     search_fields = ['name']
     list_filter = ['information']
     
-# =======================================================================================================
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 @admin.register(models.State)
 class StateAdmin(ModelAdmin):
@@ -17,7 +17,7 @@ class StateAdmin(ModelAdmin):
     search_fields = ['title']
     list_filter = ['president']
 
-# =======================================================================================================
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 @admin.register(models.Governor_Region)
 class GovernorRegionAdmin(ModelAdmin):
@@ -25,7 +25,7 @@ class GovernorRegionAdmin(ModelAdmin):
     search_fields = ['name']
     list_filter = ['information']
 
-# =======================================================================================================
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 @admin.register(models.Region)
 class RegionAdmin(ModelAdmin):
@@ -33,7 +33,7 @@ class RegionAdmin(ModelAdmin):
     search_fields = ['title']
     list_filter = ['state', 'governor']
 
-# =======================================================================================================
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 @admin.register(models.Governor_District)
 class GovernorDistrictAdmin(ModelAdmin):
@@ -41,7 +41,7 @@ class GovernorDistrictAdmin(ModelAdmin):
     search_fields = ['name']
     list_filter = ['information']
 
-# =======================================================================================================
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 @admin.register(models.District)
 class DistrictAdmin(ModelAdmin):
@@ -49,7 +49,7 @@ class DistrictAdmin(ModelAdmin):
     search_fields = ['title']
     list_filter = ['region', 'governor']  
 
-# =======================================================================================================
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 @admin.register(models.Chairman)
 class ChairmanAdmin(ModelAdmin):
@@ -57,7 +57,7 @@ class ChairmanAdmin(ModelAdmin):
     search_fields = ['name']
     list_filter = ['information']
 
-# =======================================================================================================
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 @admin.register(models.MFY)
 class MFYAdmin(ModelAdmin):
@@ -65,7 +65,7 @@ class MFYAdmin(ModelAdmin):
     search_fields = ['title']
     list_filter = [ 'district','chairman']
 
-# =======================================================================================================
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 @admin.register(models.Neighborhood)
 class NeighborhoodAdmin(ModelAdmin):
@@ -73,7 +73,7 @@ class NeighborhoodAdmin(ModelAdmin):
     search_fields = ['title']
     list_filter = ['MFY']
 
-# =======================================================================================================
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 @admin.register(models.House)
 class HouseAdmin(ModelAdmin):
@@ -81,7 +81,7 @@ class HouseAdmin(ModelAdmin):
     search_fields = ['house_number']
     list_filter = ['a_b', 'neighborhood', 'status']
 
-# =======================================================================================================
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 @admin.register(models.Human)
 class HumanAdmin(ModelAdmin):

@@ -14,7 +14,7 @@ class MyShortUuid(models.Model):
     class Meta:
         abstract  = True
 
-# -------------------------------------------------------------------------------------------
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 class President(MyShortUuid):
     name = models.CharField(max_length=200)
@@ -29,7 +29,7 @@ class President(MyShortUuid):
     class Meta:
         ordering = ['-uuid']
 
-# -------------------------------------------------------------------------------------------
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 class State(MyShortUuid):
     title = models.CharField(max_length=200)
@@ -49,7 +49,7 @@ class State(MyShortUuid):
     class Meta:
         ordering = ['-uuid']
 
-# -------------------------------------------------------------------------------------------
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 class Governor_Region(MyShortUuid):
     name = models.CharField(max_length=200)
@@ -63,7 +63,7 @@ class Governor_Region(MyShortUuid):
     class Meta:
         ordering = ['-uuid']
 
-# -------------------------------------------------------------------------------------------
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 class Region(MyShortUuid):
     title = models.CharField(max_length=200)
@@ -81,7 +81,7 @@ class Region(MyShortUuid):
     class Meta:
         ordering = ['-uuid']
 
-# -------------------------------------------------------------------------------------------
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 class Governor_District(MyShortUuid):
     name = models.CharField(max_length=200)
@@ -95,7 +95,7 @@ class Governor_District(MyShortUuid):
     class Meta:
         ordering = ['-uuid']
 
-# -------------------------------------------------------------------------------------------
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 class District(MyShortUuid):
     title = models.CharField(max_length=200)
@@ -103,7 +103,7 @@ class District(MyShortUuid):
     governor = models.ForeignKey(Governor_District, on_delete=models.SET_NULL, null=True, related_name='district')
     about = CKEditor5Field(config_name='extends')
     area_km_kv = models.DecimalField(decimal_places=2, max_digits=10)
-    MFY = models.PositiveIntegerField()
+    MFYs = models.PositiveIntegerField()
     people = models.PositiveIntegerField()
     created = models.DateField(auto_now_add=True)
 
@@ -114,7 +114,7 @@ class District(MyShortUuid):
         ordering = ['-uuid']
 
 
-# -------------------------------------------------------------------------------------------
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 class Chairman(MyShortUuid):
     name = models.CharField(max_length=200)
@@ -128,7 +128,7 @@ class Chairman(MyShortUuid):
     class Meta:
         ordering = ['-uuid']
 
-# -------------------------------------------------------------------------------------------
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 class MFY(MyShortUuid):
@@ -146,7 +146,7 @@ class MFY(MyShortUuid):
     class Meta:
         ordering = ['-uuid']
 
-# -------------------------------------------------------------------------------------------
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 class Neighborhood(MyShortUuid):   
@@ -164,7 +164,7 @@ class Neighborhood(MyShortUuid):
     class Meta:
         ordering = ['-uuid']
 
-# -------------------------------------------------------------------------------------------
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 class House(MyShortUuid):
@@ -184,7 +184,7 @@ class House(MyShortUuid):
         ordering = ['house_number', 'a_b']
 
       
-# -------------------------------------------------------------------------------------------
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 class Human(MyShortUuid):
@@ -198,4 +198,3 @@ class Human(MyShortUuid):
     def __str__(self):
         return self.name
 
-# -------------------------------------------------------------------------------------------
