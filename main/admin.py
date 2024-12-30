@@ -2,6 +2,9 @@ from django.contrib import admin
 from unfold.admin import ModelAdmin
 from main import models
 
+class UserAdmin(ModelAdmin):
+    list_display = ['username']
+
 
 @admin.register(models.President)
 class PresidentAdmin(ModelAdmin):
@@ -89,4 +92,8 @@ class HumanAdmin(ModelAdmin):
     search_fields = ['fullname']
     list_filter = ['status', 'information', 'house']
 
-    
+@admin.register(models.Profile)
+class ProfileAdmin(ModelAdmin):
+    list_display = ['uuid', 'user']
+    search_fields = ['user']
+  

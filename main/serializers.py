@@ -82,7 +82,16 @@ class HouseSerializer(ModelSerializer):
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 class HumanSerializer(ModelSerializer):
+    user = SlugRelatedField(slug_field = 'username', read_only=True)
     house = SlugRelatedField(slug_field = 'house_number', read_only = True )
     class Meta:
         model = models.Human
+        fields = '__all__'
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        
+class ProfileSerializer(ModelSerializer):
+    user = SlugRelatedField(slug_field = 'username', read_only=True)
+    class Meta:
+        model = models.Profile
         fields = '__all__'

@@ -1,11 +1,8 @@
 import os
 import random
 import django
-from string import ascii_letters, digits
-from random import choices, choice
-from django.core.files.uploadedfile import SimpleUploadedFile
-from io import BytesIO
-from PIL import Image
+from random import choice
+
 
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'config.settings')
@@ -109,7 +106,7 @@ for _ in range(13):
         governor = choice(models.Governor_District.objects.all()),
         about = fake.text(max_nb_chars=200),
         area_km_kv = round(random.uniform(10, 90), 2),
-        MFY = round(random.uniform(5 ,30)),
+        MFYs = round(random.uniform(5 ,30)),
         people = round(random.uniform(100000, 10000000)),
     )
     districts.save()
