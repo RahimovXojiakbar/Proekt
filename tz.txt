@@ -1,5 +1,11 @@
 
-Mazkur kod Django ORM yordamida davlat, hudud, tuman, mahalla, qo‘shnichilik, uy va odamlar kabi tuzilmalarning ma'lumotlar bazasidagi modelini yaratadi. 
+Mazkur kod Django ORM yordamida davlat, hudud, tuman, mahalla,  uy va odamlar kabi tuzilmalarning ma'lumotlar bazasidagi modelini yaratadi. 
+
+Loyihaning nomi:
+    Davlat Boshqaruvi Tizimi
+
+Loyihaning maqsadi:
+    Davlat boshqaruvi tizimini raqamli shaklda tashkil etish, aholining ijtimoiy holati va ma'lumotlarini boshqarish.
 
 Modellar:
     President (Prezident): Prezidentning ismi, partiyasi va tarjimai holini saqlaydi.
@@ -10,6 +16,7 @@ Modellar:
     Neighborhood (Mahalla): MFY tarkibidagi Mahalla ma'lumotlari.
     House (Uy): Mahalla tarkibidagi uylar va ularning aholisi.
     Human (Odam): Uyda yashovchilar haqida ma'lumot.
+
 Asosiy xususiyatlar: Har bir modelda unikal identifikator, tegishli tashqi kalit bog‘lanishlari va ko‘rinish tartibi mavjud.
 
 
