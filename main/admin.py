@@ -22,7 +22,7 @@ class StateAdmin(ModelAdmin):
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-@admin.register(models.Governor_Region)
+@admin.register(models.GovernorRegion)
 class GovernorRegionAdmin(ModelAdmin):
     list_display = ['uuid', 'name']
     search_fields = ['name']
@@ -38,7 +38,7 @@ class RegionAdmin(ModelAdmin):
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-@admin.register(models.Governor_District)
+@admin.register(models.GovernorDistrict)
 class GovernorDistrictAdmin(ModelAdmin):
     list_display = ['uuid', 'name']
     search_fields = ['name']

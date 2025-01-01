@@ -19,7 +19,7 @@ class StateSerializer(ModelSerializer):
 
 class GovernorRegionSerializer(ModelSerializer):
     class Meta:
-        model = models.Governor_Region
+        model = models.GovernorRegion
         fields = '__all__'
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -35,7 +35,7 @@ class RegionSerializer(ModelSerializer):
 
 class GovernorDistrictSerializer(ModelSerializer):
     class Meta:
-        model = models.Governor_District
+        model = models.GovernorDistrict
         fields = '__all__'
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -95,3 +95,4 @@ class ProfileSerializer(ModelSerializer):
     class Meta:
         model = models.Profile
         fields = '__all__'
+        

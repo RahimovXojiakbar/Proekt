@@ -33,7 +33,7 @@ class StateViewSet(ModelViewSet):
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 class GovernorRegionViewSet(ModelViewSet):
-    queryset = models.Governor_Region.objects.all()
+    queryset = models.GovernorRegion.objects.all()
     serializer_class = serializers.GovernorRegionSerializer
     pagination_class = MyPagination
     filter_backends = [SearchFilter, DjangoFilterBackend]
@@ -53,7 +53,7 @@ class RegionViewSet(ModelViewSet):
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 class GovernorDistrictViewSet(ModelViewSet):
-    queryset = models.Governor_District.objects.all()
+    queryset = models.GovernorDistrict.objects.all()
     serializer_class = serializers.GovernorDistrictSerializer
     pagination_class = MyPagination
     filter_backends = [SearchFilter, DjangoFilterBackend]
