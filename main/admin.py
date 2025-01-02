@@ -89,7 +89,7 @@ class HouseAdmin(ModelAdmin):
 @admin.register(models.Human)
 class HumanAdmin(ModelAdmin):
     list_display = ['uuid', 'name']
-    search_fields = ['fullname']
+    search_fields = ['name']
     list_filter = ['status', 'information', 'house']
 
 @admin.register(models.Profile)
